@@ -1,0 +1,16 @@
+pandas
+numpy
+requests
+
+pyarrow
+
+boto3
+s3fs
+
+snowflake-connector-python
+
+apache-airflow
+
+python-dotenv
+
+loguru
