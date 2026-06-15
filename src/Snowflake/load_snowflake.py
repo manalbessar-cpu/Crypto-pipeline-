@@ -1,14 +1,20 @@
 import snowflake.connector
 import pandas as pd
-import math   # ✅ مهم
+import math
+from datetime import datetime
 
 # =========================
-# CLEAN FUNCTION (FIXED)
+# CLEAN FUNCTION
 # =========================
 def clean_value(x):
     if pd.isna(x) or (isinstance(x, float) and math.isnan(x)):
         return None
     return float(x)
+
+# =========================
+# TODAY DATE
+# =========================
+today = datetime.now().strftime("%Y-%m-%d")
 
 # =========================
 # 1. CONNECTION
@@ -26,12 +32,23 @@ cursor = conn.cursor()
 print("✅ Connected to Snowflake")
 
 # =========================
-# 2. LOAD DATA
+# 2. LOAD GOLD FILES
 # =========================
-dim_crypto = pd.read_parquet("data/gold/dim_crypto_2026-06-10.parquet")
-dim_date = pd.read_parquet("data/gold/dim_date_2026-06-10.parquet")
-dim_time = pd.read_parquet("data/gold/dim_time_2026-06-10.parquet")
-fact = pd.read_parquet("data/gold/fact_crypto_market_2026-06-10.parquet")
+dim_crypto = pd.read_parquet(
+    f"data/gold/dim_crypto_{today}.parquet"
+)
+
+dim_date = pd.read_parquet(
+    f"data/gold/dim_date_{today}.parquet"
+)
+
+dim_time = pd.read_parquet(
+    f"data/gold/dim_time_{today}.parquet"
+)
+
+fact = pd.read_parquet(
+    f"data/gold/fact_crypto_market_{today}.parquet"
+)
 
 print("📦 Gold data loaded")
 

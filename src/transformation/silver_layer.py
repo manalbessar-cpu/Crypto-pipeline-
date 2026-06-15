@@ -20,12 +20,12 @@ silver_bucket = "crypto-silver"
 today = datetime.now()
 
 date_path = today.strftime("%Y/%m/%d")
-file_time = today.strftime("%Y-%m-%d_%H-%M-%S")
+file_date = today.strftime("%Y-%m-%d")
 
 bronze_object = f"{date_path}/raw.json"
 
 # =========================
-# 2. DOWNLOAD FROM BRONZE (MINIO)
+# 2. DOWNLOAD FROM BRONZE
 # =========================
 
 local_input = "temp_raw.json"
@@ -75,20 +75,20 @@ df = df.dropna(subset=["id", "current_price"])
 silver_local_folder = "data/silver"
 os.makedirs(silver_local_folder, exist_ok=True)
 
-local_output = f"{silver_local_folder}/crypto_market_{file_time}.parquet"
+local_output = f"{silver_local_folder}/crypto_market_{file_date}.parquet"
 
 df.to_parquet(local_output, index=False)
 
 print("💾 Saved locally:", local_output)
 
 # =========================
-# 6. UPLOAD TO MINIO (SILVER)
+# 6. UPLOAD TO MINIO
 # =========================
 
 if not client.bucket_exists(silver_bucket):
     client.make_bucket(silver_bucket)
 
-silver_object = f"{file_time}/crypto_market.parquet"
+silver_object = f"{file_date}/crypto_market.parquet"
 
 client.fput_object(
     silver_bucket,

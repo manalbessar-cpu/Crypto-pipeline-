@@ -1,16 +1,22 @@
 pandas
 numpy
 requests
-
 pyarrow
 
-boto3
 s3fs
+boto3
 
 snowflake-connector-python
 
 apache-airflow
+apache-airflow-providers-http
+apache-airflow-providers-snowflake
+apache-airflow-providers-amazon
 
 python-dotenv
-
 loguru
+tenacity
+
+python-dateutil
+pytz
+fastparquet
