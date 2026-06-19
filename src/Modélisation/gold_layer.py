@@ -2,17 +2,20 @@ import pandas as pd
 import os
 from datetime import datetime
 from minio import Minio
-
+from dotenv import load_dotenv
+load_dotenv()
 # =========================
 # 1. CONFIG
 # =========================
 
 client = Minio(
-    "localhost:9000",
-    access_key="minio",
-    secret_key="minio123",
-    secure=False
+    os.getenv("MINIO_ENDPOINT"),
+    access_key=os.getenv("MINIO_ACCESS_KEY"),
+    secret_key=os.getenv("MINIO_SECRET_KEY"),
+    secure=os.getenv("MINIO_SECURE", "False").lower() == "true"
 )
+
+
 
 silver_bucket = "crypto-silver"
 gold_bucket = "crypto-gold"

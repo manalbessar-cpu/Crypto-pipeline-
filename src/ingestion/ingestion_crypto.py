@@ -3,6 +3,8 @@ import json
 import os
 from datetime import datetime
 from minio import Minio
+from dotenv import load_dotenv
+load_dotenv()
 
 # =========================
 # 1. CONFIG
@@ -19,11 +21,12 @@ params = {
 }
 
 # MinIO config
+
 client = Minio(
-    "localhost:9000",
-    access_key="minio",
-    secret_key="minio123",
-    secure=False
+    os.getenv("MINIO_ENDPOINT"),
+    access_key=os.getenv("MINIO_ACCESS_KEY"),
+    secret_key=os.getenv("MINIO_SECRET_KEY"),
+    secure=os.getenv("MINIO_SECURE", "False").lower() == "true"
 )
 
 bucket = "crypto-bronze"

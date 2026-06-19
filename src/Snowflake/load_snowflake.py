@@ -2,7 +2,9 @@ import snowflake.connector
 import pandas as pd
 import math
 from datetime import datetime
-
+import os 
+from dotenv import load_dotenv
+load_dotenv()
 # =========================
 # CLEAN FUNCTION
 # =========================
@@ -20,12 +22,12 @@ today = datetime.now().strftime("%Y-%m-%d")
 # 1. CONNECTION
 # =========================
 conn = snowflake.connector.connect(
-    user="MANAL",
-    password="Bigdata2026@2004",
-    account="stfsfeb-xv56862",
-    warehouse="COMPUTE_WH",
-    database="CRYPTO_DB",
-    schema="PUBLIC"
+    user=os.getenv("SNOWFLAKE_USER"),
+    password=os.getenv("SNOWFLAKE_PASSWORD"),
+    account=os.getenv("SNOWFLAKE_ACCOUNT"),
+    warehouse=os.getenv("SNOWFLAKE_WAREHOUSE"),
+    database=os.getenv("SNOWFLAKE_DATABASE"),
+    schema=os.getenv("SNOWFLAKE_SCHEMA")
 )
 
 cursor = conn.cursor()

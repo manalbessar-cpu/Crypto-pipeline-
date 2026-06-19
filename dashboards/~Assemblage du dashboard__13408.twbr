@@ -1,0 +1,1926 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Indicateur' datatype='string' name='[Paramètre Current Price]' param-domain-type='list' role='measure' type='nominal' value='&quot;Current Price&quot;'>
+        <calculation class='tableau' formula='&quot;Current Price&quot;' />
+        <members>
+          <member value='&quot;Current Price&quot;' />
+          <member value='&quot;Market Cap&quot;' />
+          <member value='&quot;Total Volume&quot;' />
+          <member value='&quot;Variation Prix 7J&quot;' />
+        </members>
+      </column>
+      <column caption='Date Début' datatype='date' name='[Paramètre Full Date]' param-domain-type='any' role='measure' type='quantitative' value='#2026-06-04#'>
+        <calculation class='tableau' formula='#2026-06-04#' />
+      </column>
+      <column caption='Crypto Sélectionnée' datatype='string' name='[Paramètre Name]' param-domain-type='list' role='measure' type='nominal' value='&quot;Aster&quot;'>
+        <calculation class='tableau' formula='&quot;Aster&quot;' />
+        <members>
+          <member value='&quot;Aster&quot;' />
+          <member value='&quot;Avalanche&quot;' />
+          <member value='&quot;Bitcoin&quot;' />
+          <member value='&quot;Bitcoin Cash&quot;' />
+          <member value='&quot;Bittensor&quot;' />
+          <member value='&quot;BlackRock USD Institutional Digital Liquidity Fund&quot;' />
+          <member value='&quot;BNB&quot;' />
+          <member value='&quot;Canton&quot;' />
+          <member value='&quot;Cardano&quot;' />
+          <member value='&quot;Chainlink&quot;' />
+          <member value='&quot;Circle USYC&quot;' />
+          <member value='&quot;Cronos&quot;' />
+          <member value='&quot;Dai&quot;' />
+          <member value='&quot;Dogecoin&quot;' />
+          <member value='&quot;Ethena USDe&quot;' />
+          <member value='&quot;Ethereum&quot;' />
+          <member value='&quot;Figure Heloc&quot;' />
+          <member value='&quot;Global Dollar&quot;' />
+          <member value='&quot;Gram (prev. Toncoin)&quot;' />
+          <member value='&quot;Hedera&quot;' />
+          <member value='&quot;Hyperliquid&quot;' />
+          <member value='&quot;LAB&quot;' />
+          <member value='&quot;LEO Token&quot;' />
+          <member value='&quot;Litecoin&quot;' />
+          <member value='&quot;Mantle&quot;' />
+          <member value='&quot;MemeCore&quot;' />
+          <member value='&quot;Monero&quot;' />
+          <member value='&quot;NEAR Protocol&quot;' />
+          <member value='&quot;Ondo&quot;' />
+          <member value='&quot;Ondo US Dollar Yield&quot;' />
+          <member value='&quot;PAX Gold&quot;' />
+          <member value='&quot;PayPal USD&quot;' />
+          <member value='&quot;Polkadot&quot;' />
+          <member value='&quot;Rain&quot;' />
+          <member value='&quot;Ripple USD&quot;' />
+          <member value='&quot;Shiba Inu&quot;' />
+          <member value='&quot;Solana&quot;' />
+          <member value='&quot;Stellar&quot;' />
+          <member value='&quot;Sui&quot;' />
+          <member value='&quot;Tether&quot;' />
+          <member value='&quot;Tether Gold&quot;' />
+          <member value='&quot;Toncoin&quot;' />
+          <member value='&quot;TRON&quot;' />
+          <member value='&quot;Uniswap&quot;' />
+          <member value='&quot;USD1&quot;' />
+          <member value='&quot;USDC&quot;' />
+          <member value='&quot;USDS&quot;' />
+          <member value='&quot;WhiteBIT Coin&quot;' />
+          <member value='&quot;World Liberty Financial&quot;' />
+          <member value='&quot;Worldcoin&quot;' />
+          <member value='&quot;XRP&quot;' />
+          <member value='&quot;Zcash&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' inline='true' name='federated.1914bj50nye9wx14ybtc51y8ye3l' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='stfsfeb-xv56862.snowflakecomputing.com' name='snowflake.0jwx1701o0166j14qc2ip0k9m3pt'>
+            <connection authentication='Username Password' class='snowflake' dbname='CRYPTO_DB' max-varchar-size='' odbc-connect-string-extras='' one-time-sql='' schema='PUBLIC' server='stfsfeb-xv56862.snowflakecomputing.com' service='ACCOUNTADMIN' temp-table-detection='optimized' username='MANAL' warehouse='COMPUTE_WH' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='snowflake.0jwx1701o0166j14qc2ip0k9m3pt' name='FACT_CRYPTO_MARKET' table='[CRYPTO_DB].[PUBLIC].[FACT_CRYPTO_MARKET]' type='table' />
+          <relation connection='snowflake.0jwx1701o0166j14qc2ip0k9m3pt' name='DIM_CRYPTO' table='[CRYPTO_DB].[PUBLIC].[DIM_CRYPTO]' type='table' />
+          <relation connection='snowflake.0jwx1701o0166j14qc2ip0k9m3pt' name='DIM_DATE' table='[CRYPTO_DB].[PUBLIC].[DIM_DATE]' type='table' />
+          <relation connection='snowflake.0jwx1701o0166j14qc2ip0k9m3pt' name='DIM_TIME' table='[CRYPTO_DB].[PUBLIC].[DIM_TIME]' type='table' />
+        </relation>
+        <cols>
+          <map key='[COIN_GECKO_ID]' value='[DIM_CRYPTO].[COIN_GECKO_ID]' />
+          <map key='[CRYPTO_ID (DIM_CRYPTO)]' value='[DIM_CRYPTO].[CRYPTO_ID]' />
+          <map key='[CRYPTO_ID]' value='[FACT_CRYPTO_MARKET].[CRYPTO_ID]' />
+          <map key='[CURRENT_PRICE]' value='[FACT_CRYPTO_MARKET].[CURRENT_PRICE]' />
+          <map key='[DATE_ID (DIM_DATE)]' value='[DIM_DATE].[DATE_ID]' />
+          <map key='[DATE_ID]' value='[FACT_CRYPTO_MARKET].[DATE_ID]' />
+          <map key='[DAY]' value='[DIM_DATE].[DAY]' />
+          <map key='[FACT_ID]' value='[FACT_CRYPTO_MARKET].[FACT_ID]' />
+          <map key='[FULL_DATE]' value='[DIM_DATE].[FULL_DATE]' />
+          <map key='[HIGH_24H]' value='[FACT_CRYPTO_MARKET].[HIGH_24H]' />
+          <map key='[HOUR]' value='[DIM_TIME].[HOUR]' />
+          <map key='[LOW_24H]' value='[FACT_CRYPTO_MARKET].[LOW_24H]' />
+          <map key='[MARKET_CAP]' value='[FACT_CRYPTO_MARKET].[MARKET_CAP]' />
+          <map key='[MARKET_CAP_RANK]' value='[DIM_CRYPTO].[MARKET_CAP_RANK]' />
+          <map key='[MINUTE]' value='[DIM_TIME].[MINUTE]' />
+          <map key='[MONTH]' value='[DIM_DATE].[MONTH]' />
+          <map key='[NAME]' value='[DIM_CRYPTO].[NAME]' />
+          <map key='[PRICE_CHANGE_24H]' value='[FACT_CRYPTO_MARKET].[PRICE_CHANGE_24H]' />
+          <map key='[PRICE_CHANGE_PERCENTAGE_24H]' value='[FACT_CRYPTO_MARKET].[PRICE_CHANGE_PERCENTAGE_24H]' />
+          <map key='[QUARTER]' value='[DIM_DATE].[QUARTER]' />
+          <map key='[SYMBOL]' value='[DIM_CRYPTO].[SYMBOL]' />
+          <map key='[TIME_ID (DIM_TIME)]' value='[DIM_TIME].[TIME_ID]' />
+          <map key='[TIME_ID]' value='[FACT_CRYPTO_MARKET].[TIME_ID]' />
+          <map key='[TOTAL_VOLUME]' value='[FACT_CRYPTO_MARKET].[TOTAL_VOLUME]' />
+          <map key='[WEEK]' value='[DIM_DATE].[WEEK]' />
+          <map key='[YEAR]' value='[DIM_DATE].[YEAR]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>FACT_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[FACT_ID]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>FACT_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CRYPTO_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[CRYPTO_ID]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>CRYPTO_ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATE_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[DATE_ID]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>DATE_ID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TIME_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TIME_ID]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>TIME_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CURRENT_PRICE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CURRENT_PRICE]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>CURRENT_PRICE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HIGH_24H</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[HIGH_24H]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>HIGH_24H</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LOW_24H</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LOW_24H]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>LOW_24H</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_VOLUME</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TOTAL_VOLUME]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>TOTAL_VOLUME</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARKET_CAP</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MARKET_CAP]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>MARKET_CAP</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRICE_CHANGE_24H</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PRICE_CHANGE_24H]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>PRICE_CHANGE_24H</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRICE_CHANGE_PERCENTAGE_24H</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PRICE_CHANGE_PERCENTAGE_24H]</local-name>
+            <parent-name>[FACT_CRYPTO_MARKET]</parent-name>
+            <remote-alias>PRICE_CHANGE_PERCENTAGE_24H</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CRYPTO_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[CRYPTO_ID (DIM_CRYPTO)]</local-name>
+            <parent-name>[DIM_CRYPTO]</parent-name>
+            <remote-alias>CRYPTO_ID</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_CRYPTO (CRYPTO_DB.DIM_CRYPTO)_28DA483C07EC43F39BC273D0FFD01831]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COIN_GECKO_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COIN_GECKO_ID]</local-name>
+            <parent-name>[DIM_CRYPTO]</parent-name>
+            <remote-alias>COIN_GECKO_ID</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_CRYPTO (CRYPTO_DB.DIM_CRYPTO)_28DA483C07EC43F39BC273D0FFD01831]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SYMBOL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SYMBOL]</local-name>
+            <parent-name>[DIM_CRYPTO]</parent-name>
+            <remote-alias>SYMBOL</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_CRYPTO (CRYPTO_DB.DIM_CRYPTO)_28DA483C07EC43F39BC273D0FFD01831]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NAME]</local-name>
+            <parent-name>[DIM_CRYPTO]</parent-name>
+            <remote-alias>NAME</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_CRYPTO (CRYPTO_DB.DIM_CRYPTO)_28DA483C07EC43F39BC273D0FFD01831]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARKET_CAP_RANK</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[MARKET_CAP_RANK]</local-name>
+            <parent-name>[DIM_CRYPTO]</parent-name>
+            <remote-alias>MARKET_CAP_RANK</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_CRYPTO (CRYPTO_DB.DIM_CRYPTO)_28DA483C07EC43F39BC273D0FFD01831]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATE_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[DATE_ID (DIM_DATE)]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>DATE_ID</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FULL_DATE</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[FULL_DATE]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>FULL_DATE</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEAR</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[YEAR]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>YEAR</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>QUARTER</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[QUARTER]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>QUARTER</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MONTH</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[MONTH]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>MONTH</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WEEK</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[WEEK]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>WEEK</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DAY</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[DAY]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>DAY</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TIME_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TIME_ID (DIM_TIME)]</local-name>
+            <parent-name>[DIM_TIME]</parent-name>
+            <remote-alias>TIME_ID</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_TIME (CRYPTO_DB.DIM_TIME)_EDF5412E976B4D928EF23D2635CFF1CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HOUR</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[HOUR]</local-name>
+            <parent-name>[DIM_TIME]</parent-name>
+            <remote-alias>HOUR</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_TIME (CRYPTO_DB.DIM_TIME)_EDF5412E976B4D928EF23D2635CFF1CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MINUTE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[MINUTE]</local-name>
+            <parent-name>[DIM_TIME]</parent-name>
+            <remote-alias>MINUTE</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[DIM_TIME (CRYPTO_DB.DIM_TIME)_EDF5412E976B4D928EF23D2635CFF1CD]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Coin Gecko Id' datatype='string' name='[COIN_GECKO_ID]' role='dimension' type='nominal' />
+      <column caption='Crypto Id (Dim Crypto)' datatype='integer' name='[CRYPTO_ID (DIM_CRYPTO)]' role='dimension' type='ordinal' />
+      <column caption='Crypto Id' datatype='integer' name='[CRYPTO_ID]' role='dimension' type='ordinal' />
+      <column caption='Current Price' datatype='real' name='[CURRENT_PRICE]' role='measure' type='quantitative' />
+      <column caption='Ratio Volume Market Cap' datatype='real' name='[Calculation_1336195418898434]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([TOTAL_VOLUME]) / SUM([MARKET_CAP])' />
+      </column>
+      <column caption='Performance Relative' datatype='real' name='[Calculation_1336195419250691]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([CURRENT_PRICE]) - SUM([LOW_24H])) &#13;&#10;/ &#13;&#10;(SUM([HIGH_24H]) - SUM([LOW_24H])) * 100' />
+      </column>
+      <column caption='Variation Prix 7J' datatype='real' name='[Calculation_1336195419418628]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([CURRENT_PRICE]) - LOOKUP(SUM([CURRENT_PRICE]), -7)) &#13;&#10;/ &#13;&#10;LOOKUP(SUM([CURRENT_PRICE]), -7) * 100'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Date Id (Dim Date)' datatype='integer' name='[DATE_ID (DIM_DATE)]' role='dimension' type='ordinal' />
+      <column caption='Date Id' datatype='integer' name='[DATE_ID]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[DAY]' role='dimension' type='quantitative' />
+      <column caption='Fact Id' datatype='integer' name='[FACT_ID]' role='dimension' type='ordinal' />
+      <column caption='Full Date' datatype='date' name='[FULL_DATE]' role='dimension' type='ordinal' />
+      <column caption='High 24H' datatype='real' name='[HIGH_24H]' role='measure' type='quantitative' />
+      <column caption='Hour' datatype='integer' name='[HOUR]' role='measure' type='quantitative' />
+      <column caption='Low 24H' datatype='real' name='[LOW_24H]' role='measure' type='quantitative' />
+      <column caption='Market Cap' datatype='real' name='[MARKET_CAP]' role='measure' type='quantitative' />
+      <column caption='Market Cap Rank' datatype='integer' name='[MARKET_CAP_RANK]' role='measure' type='quantitative' />
+      <column caption='Minute' datatype='integer' name='[MINUTE]' role='measure' type='quantitative' />
+      <column caption='Month' datatype='integer' name='[MONTH]' role='dimension' type='quantitative' />
+      <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+      <column caption='Price Change 24H' datatype='real' name='[PRICE_CHANGE_24H]' role='measure' type='quantitative' />
+      <column caption='Price Change Percentage 24H' datatype='real' name='[PRICE_CHANGE_PERCENTAGE_24H]' role='measure' type='quantitative' />
+      <column caption='Quarter' datatype='integer' name='[QUARTER]' role='dimension' type='quantitative' />
+      <column caption='Symbol' datatype='string' name='[SYMBOL]' role='dimension' type='nominal' />
+      <column caption='Time Id (Dim Time)' datatype='integer' name='[TIME_ID (DIM_TIME)]' role='dimension' type='ordinal' />
+      <column caption='Time Id' datatype='integer' name='[TIME_ID]' role='dimension' type='ordinal' />
+      <column caption='Total Volume' datatype='real' name='[TOTAL_VOLUME]' role='measure' type='quantitative' />
+      <column caption='Week' datatype='integer' name='[WEEK]' role='dimension' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[YEAR]' role='dimension' type='quantitative' />
+      <column caption='DIM_CRYPTO' datatype='table' name='[__tableau_internal_object_id__].[DIM_CRYPTO (CRYPTO_DB.DIM_CRYPTO)_28DA483C07EC43F39BC273D0FFD01831]' role='measure' type='quantitative' />
+      <column caption='DIM_DATE' datatype='table' name='[__tableau_internal_object_id__].[DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0]' role='measure' type='quantitative' />
+      <column caption='DIM_TIME' datatype='table' name='[__tableau_internal_object_id__].[DIM_TIME (CRYPTO_DB.DIM_TIME)_EDF5412E976B4D928EF23D2635CFF1CD]' role='measure' type='quantitative' />
+      <column caption='FACT_CRYPTO_MARKET' datatype='table' name='[__tableau_internal_object_id__].[FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486]' role='measure' type='quantitative' />
+      <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Name)' hidden='true' name='[Action (Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[NAME]' />
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='Date Hierarchy'>
+          <field>[YEAR]</field>
+          <field>[QUARTER]</field>
+          <field>[MONTH]</field>
+          <field>[WEEK]</field>
+          <field>[DAY]</field>
+        </drill-path>
+      </drill-paths>
+      <layout common-percentage='0.916223' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.0837766' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:NAME:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Canton&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Ondo&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;World Liberty Financial&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Circle USYC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Hyperliquid&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Tether Gold&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Bitcoin Cash&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mantle&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;USD1&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Dai&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Polkadot&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Cardano&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Ondo US Dollar Yield&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Worldcoin&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bittensor&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;MemeCore&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;USDC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Gram (prev. Toncoin)&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Sui&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Aster&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;LAB&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Toncoin&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Figure Heloc&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Solana&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;BlackRock USD Institutional Digital Liquidity Fund&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Monero&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;USDS&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Dogecoin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Rain&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Ethena USDe&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Ripple USD&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Global Dollar&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Stellar&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Hedera&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Tether&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Chainlink&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;PAX Gold&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;XRP&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;BNB&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;NEAR Protocol&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;WhiteBIT Coin&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Avalanche&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;LEO Token&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;TRON&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Ethereum&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Shiba Inu&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Cronos&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;PayPal USD&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Zcash&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Bitcoin&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Litecoin&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Uniswap&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;FR&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='DIM_CRYPTO' id='DIM_CRYPTO (CRYPTO_DB.DIM_CRYPTO)_28DA483C07EC43F39BC273D0FFD01831'>
+            <properties context=''>
+              <relation connection='snowflake.0jwx1701o0166j14qc2ip0k9m3pt' name='DIM_CRYPTO' table='[CRYPTO_DB].[PUBLIC].[DIM_CRYPTO]' type='table' />
+            </properties>
+          </object>
+          <object caption='DIM_DATE' id='DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0'>
+            <properties context=''>
+              <relation connection='snowflake.0jwx1701o0166j14qc2ip0k9m3pt' name='DIM_DATE' table='[CRYPTO_DB].[PUBLIC].[DIM_DATE]' type='table' />
+            </properties>
+          </object>
+          <object caption='DIM_TIME' id='DIM_TIME (CRYPTO_DB.DIM_TIME)_EDF5412E976B4D928EF23D2635CFF1CD'>
+            <properties context=''>
+              <relation connection='snowflake.0jwx1701o0166j14qc2ip0k9m3pt' name='DIM_TIME' table='[CRYPTO_DB].[PUBLIC].[DIM_TIME]' type='table' />
+            </properties>
+          </object>
+          <object caption='FACT_CRYPTO_MARKET' id='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486'>
+            <properties context=''>
+              <relation connection='snowflake.0jwx1701o0166j14qc2ip0k9m3pt' name='FACT_CRYPTO_MARKET' table='[CRYPTO_DB].[PUBLIC].[FACT_CRYPTO_MARKET]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[CRYPTO_ID]' />
+              <expression op='[CRYPTO_ID (DIM_CRYPTO)]' />
+            </expression>
+            <first-end-point object-id='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486' />
+            <second-end-point object-id='DIM_CRYPTO (CRYPTO_DB.DIM_CRYPTO)_28DA483C07EC43F39BC273D0FFD01831' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[DATE_ID]' />
+              <expression op='[DATE_ID (DIM_DATE)]' />
+            </expression>
+            <first-end-point object-id='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486' />
+            <second-end-point object-id='DIM_DATE (CRYPTO_DB.DIM_DATE)_E182320525914B719768983C98A4EEA0' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[TIME_ID]' />
+              <expression op='[TIME_ID (DIM_TIME)]' />
+            </expression>
+            <first-end-point object-id='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)_743D815654EB4F3CB4C7E29BEC824486' />
+            <second-end-point object-id='DIM_TIME (CRYPTO_DB.DIM_TIME)_EDF5412E976B4D928EF23D2635CFF1CD' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filtre 1 (généré)' name='[Action1_0F518C2604874188BCCBA22C5E7E73D2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard Principal' type='sheet' worksheet='Var 24H' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard Principal' />
+      </command>
+    </action>
+    <action caption='Filtrer1' name='[Action2_0850346EA0BD4124B98B7891BD73E134]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard Principal' type='sheet'>
+        <exclude-sheet name=' KPI Market Cap' />
+        <exclude-sheet name='KPI Prix' />
+        <exclude-sheet name='KPI Volume' />
+        <exclude-sheet name='Var 24H' />
+      </source>
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value=' Scatter Plot,Heatmap,Top 10 Volume' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard Principal' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name=' Evolution Prix'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Current Price' datatype='real' name='[CURRENT_PRICE]' role='measure' type='quantitative' />
+            <column caption='Full Date' datatype='date' name='[FULL_DATE]' role='dimension' type='ordinal' />
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[CURRENT_PRICE]' derivation='Sum' name='[sum:CURRENT_PRICE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[FULL_DATE]' derivation='Year' name='[yr:FULL_DATE:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]'>
+            <groupfilter function='member' level='[NAME]' member='&quot;Tether&quot;' user:ui-action-filter='[Action2_0850346EA0BD4124B98B7891BD73E134]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]'>
+            <groupfilter function='level-members' level='[none:NAME:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]</column>
+            <column>[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:CURRENT_PRICE:qk]</rows>
+        <cols>[federated.1914bj50nye9wx14ybtc51y8ye3l].[yr:FULL_DATE:ok]</cols>
+      </table>
+      <simple-id uuid='{66605824-8C88-4004-A2DD-61913D5C969C}' />
+    </worksheet>
+    <worksheet name=' KPI Market Cap'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Market Cap' datatype='real' name='[MARKET_CAP]' role='measure' type='quantitative' />
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column-instance column='[MARKET_CAP]' derivation='Sum' name='[sum:MARKET_CAP:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]'>
+            <groupfilter function='member' level='[NAME]' member='&quot;Tether&quot;' user:ui-action-filter='[Action2_0850346EA0BD4124B98B7891BD73E134]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:MARKET_CAP:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7A61F713-5B55-45D6-B64E-7A8BE699318D}' />
+    </worksheet>
+    <worksheet name=' Scatter Plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column caption='Price Change Percentage 24H' datatype='real' name='[PRICE_CHANGE_PERCENTAGE_24H]' role='measure' type='quantitative' />
+            <column caption='Total Volume' datatype='real' name='[TOTAL_VOLUME]' role='measure' type='quantitative' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PRICE_CHANGE_PERCENTAGE_24H]' derivation='Sum' name='[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TOTAL_VOLUME]' derivation='Sum' name='[sum:TOTAL_VOLUME:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]'>
+            <groupfilter function='level-members' level='[none:NAME:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' />
+              <lod column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:TOTAL_VOLUME:qk]</rows>
+        <cols>[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]</cols>
+      </table>
+      <simple-id uuid='{851966D5-31E0-4C29-9C5B-8917727665C3}' />
+    </worksheet>
+    <worksheet name='Detail Crypto'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Current Price' datatype='real' name='[CURRENT_PRICE]' role='measure' type='quantitative' />
+            <column caption='High 24H' datatype='real' name='[HIGH_24H]' role='measure' type='quantitative' />
+            <column caption='Low 24H' datatype='real' name='[LOW_24H]' role='measure' type='quantitative' />
+            <column caption='Market Cap' datatype='real' name='[MARKET_CAP]' role='measure' type='quantitative' />
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column caption='Price Change Percentage 24H' datatype='real' name='[PRICE_CHANGE_PERCENTAGE_24H]' role='measure' type='quantitative' />
+            <column caption='Symbol' datatype='string' name='[SYMBOL]' role='dimension' type='nominal' />
+            <column caption='Total Volume' datatype='real' name='[TOTAL_VOLUME]' role='measure' type='quantitative' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SYMBOL]' derivation='None' name='[none:SYMBOL:nk]' pivot='key' type='nominal' />
+            <column-instance column='[CURRENT_PRICE]' derivation='Sum' name='[sum:CURRENT_PRICE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[HIGH_24H]' derivation='Sum' name='[sum:HIGH_24H:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[LOW_24H]' derivation='Sum' name='[sum:LOW_24H:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MARKET_CAP]' derivation='Sum' name='[sum:MARKET_CAP:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PRICE_CHANGE_PERCENTAGE_24H]' derivation='Sum' name='[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TOTAL_VOLUME]' derivation='Sum' name='[sum:TOTAL_VOLUME:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:CURRENT_PRICE:qk]' />
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:HIGH_24H:qk]' />
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:LOW_24H:qk]' />
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:MARKET_CAP:qk]' />
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:TOTAL_VOLUME:qk]' />
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk] / [federated.1914bj50nye9wx14ybtc51y8ye3l].[none:SYMBOL:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{35C56788-C0B2-4106-B5A1-FEAADD5F979E}' />
+    </worksheet>
+    <worksheet name='Heatmap'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column caption='Price Change Percentage 24H' datatype='real' name='[PRICE_CHANGE_PERCENTAGE_24H]' role='measure' type='quantitative' />
+            <column caption='Week' datatype='integer' name='[WEEK]' role='dimension' type='quantitative' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WEEK]' derivation='None' name='[none:WEEK:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PRICE_CHANGE_PERCENTAGE_24H]' derivation='Sum' name='[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' num-steps='6' palette='red_green_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' />
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]</rows>
+        <cols>[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:WEEK:qk]</cols>
+      </table>
+      <simple-id uuid='{2B169F55-8DC8-4B42-A310-6E44615F4F58}' />
+    </worksheet>
+    <worksheet name='KPI Prix'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Current Price' datatype='real' name='[CURRENT_PRICE]' role='measure' type='quantitative' />
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column-instance column='[CURRENT_PRICE]' derivation='Sum' name='[sum:CURRENT_PRICE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]'>
+            <groupfilter function='member' level='[NAME]' member='&quot;Tether&quot;' user:ui-action-filter='[Action2_0850346EA0BD4124B98B7891BD73E134]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:CURRENT_PRICE:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CEB2B5E0-D5E4-4BEA-B7F6-59DD9B8E623D}' />
+    </worksheet>
+    <worksheet name='KPI Volume'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column caption='Total Volume' datatype='real' name='[TOTAL_VOLUME]' role='measure' type='quantitative' />
+            <column-instance column='[TOTAL_VOLUME]' derivation='Sum' name='[sum:TOTAL_VOLUME:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]'>
+            <groupfilter function='member' level='[NAME]' member='&quot;Tether&quot;' user:ui-action-filter='[Action2_0850346EA0BD4124B98B7891BD73E134]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:TOTAL_VOLUME:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{18E4EC44-527D-4CB3-9407-7E239F281A26}' />
+    </worksheet>
+    <worksheet name='Top 10 Volume'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column caption='Total Volume' datatype='real' name='[TOTAL_VOLUME]' role='measure' type='quantitative' />
+            <column-instance column='[TOTAL_VOLUME]' derivation='Avg' name='[avg:TOTAL_VOLUME:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TOTAL_VOLUME]' derivation='Sum' name='[sum:TOTAL_VOLUME:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([TOTAL_VOLUME])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:NAME:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' direction='DESC' using='[federated.1914bj50nye9wx14ybtc51y8ye3l].[avg:TOTAL_VOLUME:qk]' />
+          <slices>
+            <column>[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:TOTAL_VOLUME:qk]' value='68' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:TOTAL_VOLUME:qk]</rows>
+        <cols>[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]</cols>
+      </table>
+      <simple-id uuid='{2A46EDC8-804C-4F27-8B2F-1204254F0280}' />
+    </worksheet>
+    <worksheet name='Var 24H'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_CRYPTO_MARKET (CRYPTO_DB.FACT_CRYPTO_MARKET)+ (PUBLIC)' name='federated.1914bj50nye9wx14ybtc51y8ye3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1914bj50nye9wx14ybtc51y8ye3l'>
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column caption='Price Change Percentage 24H' datatype='real' name='[PRICE_CHANGE_PERCENTAGE_24H]' role='measure' type='quantitative' />
+            <column-instance column='[PRICE_CHANGE_PERCENTAGE_24H]' derivation='Sum' name='[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]'>
+            <groupfilter function='member' level='[NAME]' member='&quot;Tether&quot;' user:ui-action-filter='[Action2_0850346EA0BD4124B98B7891BD73E134]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1914bj50nye9wx14ybtc51y8ye3l].[Action (Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BCCFF6B6-CB5C-4658-9971-8E4E96130C37}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard Détail'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='50000'>
+            <zone h='49000' id='5' type-v2='layout-basic' w='82400' x='800' y='50000'>
+              <zone h='24500' id='3' name=' Evolution Prix' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='24500' id='13' name='Detail Crypto' w='82400' x='800' y='74500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='49000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='50000'>
+              <zone h='49000' id='8' name=' Evolution Prix' pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' type-v2='color' w='16000' x='83200' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='24500' id='9' name='KPI Prix' w='49200' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='24500' id='10' name='KPI Volume' w='49200' x='50000' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='24500' id='11' name='Var 24H' w='49200' x='800' y='25500'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='24500' id='12' name=' KPI Market Cap' w='49200' x='50000' y='25500'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='40' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='188' h='24500' id='9' is-fixed='true' name='KPI Prix' w='49200' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='188' h='24500' id='10' is-fixed='true' name='KPI Volume' w='49200' x='50000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='188' h='24500' id='11' is-fixed='true' name='Var 24H' w='49200' x='800' y='25500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='188' h='24500' id='12' is-fixed='true' name=' KPI Market Cap' w='49200' x='50000' y='25500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='188' h='24500' id='3' is-fixed='true' name=' Evolution Prix' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='49000' id='8' name=' Evolution Prix' pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' type-v2='color' w='16000' x='83200' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='188' h='24500' id='13' is-fixed='true' name='Detail Crypto' w='82400' x='800' y='74500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5BDECCE5-4897-46BB-8E33-3F4B578725BC}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard Principal'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='8' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='6' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='3' name='Top 10 Volume' w='41200' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='5' name=' Scatter Plot' w='41200' x='42000' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='30625' id='10' name=' Evolution Prix' w='29300' x='800' y='19375'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='30625' id='11' name='Heatmap' w='53100' x='30100' y='19375'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18375' id='13' name='KPI Prix' w='20600' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18375' id='14' name=' KPI Market Cap' w='20600' x='21400' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18375' id='16' name='Var 24H' w='20600' x='42000' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18375' id='17' name='KPI Volume' w='20600' x='62600' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='7' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='89875' id='9' name=' Scatter Plot' pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='12' name='Heatmap' pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' type-v2='color' w='16000' x='83200' y='90875'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1800' minheight='1800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='45' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='44' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='139' h='18375' id='13' is-fixed='true' name='KPI Prix' w='20600' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='139' h='18375' id='14' is-fixed='true' name=' KPI Market Cap' w='20600' x='21400' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='139' h='18375' id='16' is-fixed='true' name='Var 24H' w='20600' x='42000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='139' h='18375' id='17' is-fixed='true' name='KPI Volume' w='20600' x='62600' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='237' h='30625' id='10' is-fixed='true' name=' Evolution Prix' w='29300' x='800' y='19375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='237' h='30625' id='11' is-fixed='true' name='Heatmap' w='53100' x='30100' y='19375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8125' id='12' name='Heatmap' pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' type-v2='color' w='16000' x='83200' y='90875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Top 10 Volume' w='41200' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='5' is-fixed='true' name=' Scatter Plot' w='41200' x='42000' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='89875' id='9' name=' Scatter Plot' pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{43A2CB2F-D5CC-4FBB-98D8-9B26700B6B29}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name=' Evolution Prix'>
+      <cards>
+        <edge name='left'>
+          <strip size='170'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E285ED75-16CA-4966-99F5-A6ECA68B89D3}' />
+    </window>
+    <window class='worksheet' name='Top 10 Volume'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{784B352B-0B5A-40C0-9929-885C145CDB19}' />
+    </window>
+    <window class='worksheet' name='Heatmap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[sum:PRICE_CHANGE_PERCENTAGE_24H:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CBC8255B-D4B2-4CA6-80FE-D20FC08010FE}' />
+    </window>
+    <window class='worksheet' name='KPI Prix'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7B426F37-D763-420E-97F2-A421D4F43905}' />
+    </window>
+    <window class='worksheet' name='Var 24H'>
+      <cards>
+        <edge name='left'>
+          <strip size='168'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{254AC59B-14A1-44F0-B91B-FA1E1F84D8B7}' />
+    </window>
+    <window class='worksheet' name='KPI Volume'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9320837D-4285-4315-828E-A20B383B7DA9}' />
+    </window>
+    <window class='worksheet' name=' KPI Market Cap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{39526EB0-C447-4E5A-B2FA-5ED625E96CE2}' />
+    </window>
+    <window class='worksheet' name=' Scatter Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.1914bj50nye9wx14ybtc51y8ye3l].[none:NAME:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{246268EE-355C-459A-9C72-DBD5277E568E}' />
+    </window>
+    <window class='worksheet' name='Detail Crypto'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{30D62159-2B2B-44B5-A6C7-9AA1D583753F}' />
+    </window>
+    <window class='dashboard' name='Dashboard Principal'>
+      <viewpoints>
+        <viewpoint name=' Evolution Prix'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name=' KPI Market Cap' />
+        <viewpoint name=' Scatter Plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Heatmap' />
+        <viewpoint name='KPI Prix' />
+        <viewpoint name='KPI Volume' />
+        <viewpoint name='Top 10 Volume'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Var 24H' />
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{8F011DCC-64BF-4D12-99F2-5B2C17C933AF}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard Détail'>
+      <viewpoints>
+        <viewpoint name=' Evolution Prix'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name=' KPI Market Cap' />
+        <viewpoint name='Detail Crypto' />
+        <viewpoint name='KPI Prix' />
+        <viewpoint name='KPI Volume' />
+        <viewpoint name='Var 24H' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{0B74B68B-3C61-45C4-946B-47D0E95C2D92}' />
+    </window>
+  </windows>
+</workbook>
